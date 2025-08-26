@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="org.example.labsheet4.HelloController"
+          hgap="10" vgap="10" alignment="CENTER"
+          style="-fx-padding: 20; -fx-background-color: #EDEDED;">
+
+  <Label text="Course ID" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+  <TextField fx:id="cidField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+  <Label text="Course Name" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+  <TextField fx:id="cnameField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+  <Label text="Description" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+  <TextField fx:id="cDescriptionField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+  <Label text="Fee" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+  <TextField fx:id="cFeeField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+  <HBox spacing="10" alignment="CENTER_RIGHT" GridPane.rowIndex="4" GridPane.columnIndex="0" GridPane.columnSpan="2">
+    <Button text="Insert" onAction="#handleInsert"/>
+    <Button text="Update" onAction="#handleUpdate"/>
+    <Button text="Delete" onAction="#handleDelete"/>
+  </HBox>
+
+  <Label fx:id="statusLabel" GridPane.rowIndex="5" GridPane.columnIndex="0" GridPane.columnSpan="2"
+         style="-fx-text-fill: green;"/>
+</GridPane>
